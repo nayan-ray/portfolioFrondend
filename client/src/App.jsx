@@ -1,4 +1,5 @@
 import Home from "./pages/home/Home"
+import ProductDetails from "./pages/productDetails/ProductDetails"
 
 function App() {
  
@@ -6,7 +7,8 @@ function App() {
   return (
     <>
     <main>
-      <Home />
+      {/* <Home /> */}
+      <ProductDetails />
     </main>
     
     </>

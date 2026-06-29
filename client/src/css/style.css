@@ -24,6 +24,7 @@
     --color-accent: #b8a07e;
     --color-nav: rgba(255, 255, 255, 0.6); 
     --shadow-header-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+    --shadow-info: 0px 0 30px rgba(0, 0, 0, 0.1);
 
    
 }
