@@ -1,5 +1,6 @@
 import React from 'react'
 import product1 from "../../assets/product-1.jpg"
+import { Link } from 'react-router-dom'
 
 const Portfolio = () => {
   return (
@@ -26,7 +27,8 @@ const Portfolio = () => {
                           <div className='absolute inset-0  bg-layer flex flex-col transition duration-300  opacity-0 group-hover:opacity-100'>
                               <h4 className='text-[14px] p-4 inline-block bg-accent font-playfair font-normal text-white'>Product Name</h4>
                              
-                            <button className=' self-center justify-self-center flex items-center gap-2.5 mt-8.5 text-[16px] bg-accent py-3 px-5 rounded-[5px] text-white cursor-pointer'>
+                       <Link to={"/portfolio/1"}>
+                        <button className=' self-center justify-self-center flex items-center gap-2.5 mt-8.5 text-[16px] bg-accent py-3 px-5 rounded-[5px] text-white cursor-pointer'>
                                 Show Details
                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -34,6 +36,10 @@ const Portfolio = () => {
 
 
                             </button>
+                       
+                       </Link>
+                            
+                           
                              
                           </div>
                       </div>

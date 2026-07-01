@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { useLocation, useNavigate } from "react-router-dom";
 import Hero from '../../components/hero/Hero'
 import Header from '../../components/header/Header'
 import Service from '../../components/service/Service'
@@ -12,6 +13,8 @@ const Home = () => {
 
   const [updatedScrollY, setUpdatedScrollY] = useState(0);
   const [showHeaderBackground, setShowHeaderBackground] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
 
   const [activeSection, setActiveSection] = useState("about");
 
@@ -20,6 +23,43 @@ const Home = () => {
   const portfolioRef = useRef(null);
   const serviceRef = useRef(null);
   const contactRef = useRef(null);
+
+
+  //useEffect to scroll to top when the component is mounted
+ 
+
+    useEffect(()=>{
+
+         if (location.state?.scrollTo === "portfolio") {
+   
+             portfolioRef.current?.scrollIntoView({
+                   behavior: "smooth",
+               });
+          
+      // Remove the state so refresh won't scroll again
+         const timer = setTimeout(() => {
+             navigate(location.pathname, {
+             replace: true,
+              state: null,
+            });
+         }, 500); // Wait for the scroll animation
+
+    return () => clearTimeout(timer);
+
+         }else{
+           window.scrollTo({
+           top: 0,
+            behavior: "smooth",
+           
+      });
+         }
+
+    },[location, navigate]);
+
+
+
+
+
 
   useEffect(()=>{
 

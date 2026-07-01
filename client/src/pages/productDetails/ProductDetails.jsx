@@ -10,7 +10,11 @@ const ProductDetails = () => {
 
     const [updatedScrollY, setUpdatedScrollY] = useState(0);
      const [showHeaderBackground, setShowHeaderBackground] = useState(false);
-  
+    
+    //useEffect to scroll to top when the component is mounted
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
   
     useEffect(()=>{
   
