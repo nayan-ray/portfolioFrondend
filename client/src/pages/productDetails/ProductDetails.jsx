@@ -9,6 +9,7 @@ import ProgessRing from '../../components/progessRing/ProgessRing'
 const ProductDetails = () => {
 
     const [updatedScrollY, setUpdatedScrollY] = useState(0);
+     const [showHeaderBackground, setShowHeaderBackground] = useState(false);
   
   
     useEffect(()=>{
@@ -18,7 +19,13 @@ const ProductDetails = () => {
            const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
            const scrollPercentage = (scrollY / documentHeight) * 100;
            setUpdatedScrollY(scrollPercentage);
-  
+
+            if (scrollY > 50) {
+              setShowHeaderBackground(true);
+            } else {
+              setShowHeaderBackground(false);
+            }
+
         }
   
         window.addEventListener('scroll', handleScroll);
@@ -34,7 +41,7 @@ const ProductDetails = () => {
     <div>
         {/* <Header /> */}
         <ProgessRing updatedScrollY={updatedScrollY} />
-        <DetailsHeader />
+        <DetailsHeader showBackground={showHeaderBackground} />
         <Goal />
         <ProjectInfo />
 

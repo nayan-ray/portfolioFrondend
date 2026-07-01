@@ -9,8 +9,8 @@ function App() {
     <>
     <main>
       {/* <ProgessRing /> */}
-      <Home />
-      {/* <ProductDetails /> */}
+      {/* <Home />  */}
+      <ProductDetails />
     </main>
     
     </>
