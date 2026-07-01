@@ -1,4 +1,5 @@
 import React from 'react'
+import { ReactTyped } from "react-typed";
 import heroImage from '../../assets/image.png'
 
 const Hero = () => {
@@ -9,8 +10,24 @@ const Hero = () => {
          <h2 className='xs:max-[768px]:text-[32px] text-[64px] font-playfair font-bold text-heading leading-[1.2] '>
            Nayan Kumar
          </h2>
-         <p className='xs:max-[768px]:text-[20px] text-[26px] mt-1.25 text-default font-roboto'>
-          I'm Designer
+         <p className='xs:max-[768px]:text-[20px] text-[26px] mt-1.25 text-default font-roboto '>
+          <span>I'm </span> 
+           <ReactTyped
+            strings={[
+                "UI/UX Designer",
+                 "Full Stack MERN Developer",
+                 "React Developer",
+                 "Problem Solver"
+               ]}
+             typeSpeed={60}
+             backSpeed={40}
+             backDelay={1500}
+             startDelay={500}
+             loop
+             showCursor
+             cursorChar="|"
+             smartBackspace
+         />
          </p>
       </div>
     </div>
