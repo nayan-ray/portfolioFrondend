@@ -1,3 +1,4 @@
+import ProgessRing from "./components/progessRing/ProgessRing"
 import Home from "./pages/home/Home"
 import ProductDetails from "./pages/productDetails/ProductDetails"
 
@@ -7,8 +8,9 @@ function App() {
   return (
     <>
     <main>
-      {/* <Home /> */}
-      <ProductDetails />
+      {/* <ProgessRing /> */}
+      <Home />
+      {/* <ProductDetails /> */}
     </main>
     
     </>
