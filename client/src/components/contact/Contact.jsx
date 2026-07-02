@@ -3,16 +3,16 @@ import React from 'react'
 const Contact = () => {
   return (
     <div className='py-15'>
-        <div className='pb-15 text-center w-full mx-auto px-3 z-3 sm:max-w-135 md:max-w-180 lg:max-w-240 xl:max-w-285 xxl:max-w-330'>
+        <div className='pb-15 text-center w-full mx-auto px-3 z-3 sm:max-w-135 md:max-w-180 lg:max-w-240 xl:max-w-285 xxl:max-w-330' data-aos="fade-up">
               <h2 className='text-[32px] font-light mb-3.75 text-[#777777] font-playfair leading-[1.2]'>Contact</h2>
               <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
         </div>
-        <div className='w-full mx-auto px-3 z-3 sm:max-w-135 md:max-w-180 lg:max-w-240 xl:max-w-285 xxl:max-w-330'>
+        <div className='w-full mx-auto px-3 z-3 sm:max-w-135 md:max-w-180 lg:max-w-240 xl:max-w-285 xxl:max-w-330' data-aos="fade-up" data-aos-delay="100">
               <div className='p-7.5 text-white shadow-contact'>
 
                 <div className='flex flex-col flex-wrap   lg:flex-row'>
                   
-                     <div className=' mb-7.5 w-full group md:px-3 lg:w-1/3 '>
+                     <div className=' mb-7.5 w-full group md:px-3 lg:w-1/3 ' data-aos="fade-up" data-aos-delay="200">
                         <div className='flex flex-row items-center '>
                            <div className='w-14 h-14 flex items-center justify-center shrink-0 border border-solid border-accent rounded-[50%] transition duration-300 group-hover:bg-accent'>
                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -37,7 +37,7 @@ const Contact = () => {
 
                     </div>
 
-                    <div className=' mb-7.5 w-full group md:px-3 lg:w-1/3 '>
+                    <div className=' mb-7.5 w-full group md:px-3 lg:w-1/3 ' data-aos="fade-up" data-aos-delay="300">
                         <div className='flex flex-row items-center '>
                            <div className='w-14 h-14 flex items-center justify-center shrink-0 border border-solid border-accent rounded-[50%] transition duration-300 group-hover:bg-accent'>
                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-5 h-5 text-accent transition duration-300 group-hover:text-white">
@@ -60,7 +60,7 @@ const Contact = () => {
 
                     </div>
 
-                    <div className=' mb-7.5 w-full group md:px-3 lg:w-1/3 '>
+                    <div className=' mb-7.5 w-full group md:px-3 lg:w-1/3 ' data-aos="fade-up" data-aos-delay="400">
                         <div className='flex flex-row items-center '>
                            <div className='w-14 h-14 flex items-center justify-center shrink-0 border border-solid border-accent rounded-[50%] transition duration-300 group-hover:bg-accent'>
                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-5 h-5 text-accent transition duration-300 group-hover:text-white">

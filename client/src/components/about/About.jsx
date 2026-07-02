@@ -4,11 +4,11 @@ import profileImg from "../../assets/profile-img.jpg"
 const About = () => {
   return (
     <div className='py-15'>
-        <div className='pb-15 text-center w-full mx-auto px-3 z-3 sm:max-w-135 md:max-w-180 lg:max-w-240 xl:max-w-285 xxl:max-w-330'>
-              <h2 className='text-[32px] font-light mb-3.75 text-[#777777] font-playfair leading-[1.2]'>About</h2>
+        <div className='pb-15 text-center w-full mx-auto px-3 z-3 sm:max-w-135 md:max-w-180 lg:max-w-240 xl:max-w-285 xxl:max-w-330' data-aos="fade-up">
+              <h2 className='text-[32px] font-light mb-3.75 text-[#777777] font-playfair leading-[1.2] ' >About</h2>
              
         </div>
-        <div className='w-full mx-auto z-3 sm:max-w-135 md:max-w-180 lg:max-w-240 xl:max-w-285 xxl:max-w-330'>
+        <div className='w-full mx-auto z-3 sm:max-w-135 md:max-w-180 lg:max-w-240 xl:max-w-285 xxl:max-w-330' data-aos="fade-up" data-aos-delay="100">
               <div className='flex flex-col flex-wrap lg:flex-row lg:justify-between'>
                   <div className='w-full xs:max-[598px]:truncate lg:w-1/3 '>
                       <div className='w-full border-20 border-solid border-accent'>
