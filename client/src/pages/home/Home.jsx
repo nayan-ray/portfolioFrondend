@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from "react-router-dom";
-import AOS from "aos";
+
 import Hero from '../../components/hero/Hero'
 import Header from '../../components/header/Header'
 import Service from '../../components/service/Service'
@@ -59,17 +59,7 @@ const Home = () => {
 
 //add AOS (Animate On Scroll) initialization
 
-useEffect(() => {
 
-    AOS.init({
-        duration: 800,
-        easing: "ease-in-out",
-        once: true,
-        mirror: false,
-        offset: 100,
-    });
-
-}, []);
     
 
 
