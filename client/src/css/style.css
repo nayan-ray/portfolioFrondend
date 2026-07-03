@@ -4,6 +4,10 @@
 
 @import "tailwindcss";
 
+@import "tailwindcss";
+@plugin "daisyui";
+
+
 @theme {
   --font-playfair: "Playfair Display", serif;
   --font-roboto : "Roboto", sans-serif;
@@ -22,7 +26,7 @@
     --color-surface: #9e9e9e;
     --color-contrast: #ffffff;
     --color-description : #898989;
-    --color-accent: #b8a07e;
+    --color-accent1: #b8a07e;
     --color-nav: rgba(255, 255, 255, 0.6); 
     --color-layer: rgba(0, 0, 0, 0.6);
 

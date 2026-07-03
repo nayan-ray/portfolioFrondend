@@ -5,9 +5,14 @@ import App from './App.jsx'
 
 import 'animate.css';
 import 'aos/dist/aos.css';
+import { LoadingProvider } from './context/LodingContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+
+    <LoadingProvider>
+       <App />
+    </LoadingProvider>
+   
   </StrictMode>,
 )

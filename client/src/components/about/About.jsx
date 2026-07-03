@@ -11,7 +11,7 @@ const About = () => {
         <div className='w-full mx-auto z-3 sm:max-w-135 md:max-w-180 lg:max-w-240 xl:max-w-285 xxl:max-w-330' data-aos="fade-up" data-aos-delay="100">
               <div className='flex flex-col flex-wrap lg:flex-row lg:justify-between'>
                   <div className='w-full xs:max-[598px]:truncate lg:w-1/3 '>
-                      <div className='w-full border-20 border-solid border-accent'>
+                      <div className='w-full border-20 border-solid border-accent1'>
                          <img src={profileImg} className='max-w-full object-cover h-auto -mt-15 ml-10 mb-10 relative z-2' alt="profile.jpg" />
                       </div>
                       

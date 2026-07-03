@@ -6,7 +6,11 @@ import AOS from "aos";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import {useLoading} from "./context/LodingContext"
+
+
 function App() {
+  const { loading } = useLoading();
 
   useEffect(() => {
   
@@ -29,10 +33,16 @@ function App() {
       <ProductDetails />
     </main> */}
 
+{useLoading && loading ? (
+  <div className="fixed top-0 left-0 w-full h-full z-500 flex items-center justify-center bg-white">
+    <span className="loading loading-bars loading-xl"></span>
+  </div>
+) 
+  : null}
 
-    <BrowserRouter>
+ <BrowserRouter>
       <Routes>
-
+          
         
            <Route path="/" element={<Home />} />
 
@@ -45,6 +55,9 @@ function App() {
       </Routes>
     </BrowserRouter>
   
+
+
+   
   </>
   )
 }

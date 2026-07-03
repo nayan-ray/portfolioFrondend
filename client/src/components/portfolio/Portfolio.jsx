@@ -1,8 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import product1 from "../../assets/product-1.jpg"
 import { Link } from 'react-router-dom'
 
+import { useLoading } from '../../context/LodingContext';
+import { getPortfolio } from '../api/apiCall';
+
 const Portfolio = () => {
+  const [portfolio, setPortfolio] = React.useState([]);
+
+
+const { setLoading } = useLoading();
+
+useEffect(() => {
+
+    async function fetchPortfolio() {
+
+        try {
+
+            setLoading(true);
+
+            const res = await getPortfolio();
+
+            setPortfolio(res.data);
+
+        }
+        catch(error){
+            console.log(error);
+        }
+        finally{
+            setLoading(false);
+        }
+
+    }
+
+    fetchPortfolio();
+
+}, []);
+
+
+
+
   return (
     <div className='py-15'>
         <div className='pb-15 text-center w-full mx-auto px-3 z-3 sm:max-w-135 md:max-w-180 lg:max-w-240 xl:max-w-285 xxl:max-w-330' data-aos="fade-up">
@@ -12,11 +49,11 @@ const Portfolio = () => {
         <div className='w-full mx-auto px-3 z-3 sm:max-w-135 md:max-w-180 lg:max-w-240 xl:max-w-285 xxl:max-w-330' data-aos="fade-up" data-aos-delay="100">
               
               <ul className='mb-5 text-center flex items-center justify-center gap-2.5 sm:gap-5 flex-wrap font-roboto'>
-                  <li className='cursor-pointer inline-block text-[14px] sm:text-[18px] font-medium leading-none transition duration-300 hover:text-accent'>All</li>
-                  <li className='cursor-pointer inline-block text-[14px] sm:text-[18px] font-medium leading-none transition duration-300 hover:text-accent'>Figma_Design</li>
-                  <li className='cursor-pointer inline-block text-[14px]  sm:text[18px]  font-medium leading-none transition duration-300 hover:text-accent'>Frond-End_Design</li>
-                  <li className='cursor-pointer inline-block text-[14px]  sm:text[18px]  font-medium leading-none transition duration-300 hover:text-accent'>Back-End_API</li>
-                  <li className='cursor-pointer inline-block text-[14px]  sm:text[18px]  font-medium leading-none transition duration-300 hover:text-accent'>Full-Stack_Development</li>
+                  <li className='cursor-pointer inline-block text-[14px] sm:text-[18px] font-medium leading-none transition duration-300 hover:text-accent1'>All</li>
+                  <li className='cursor-pointer inline-block text-[14px] sm:text-[18px] font-medium leading-none transition duration-300 hover:text-accent1'>Figma_Design</li>
+                  <li className='cursor-pointer inline-block text-[14px]  sm:text[18px]  font-medium leading-none transition duration-300 hover:text-accent1'>Frond-End_Design</li>
+                  <li className='cursor-pointer inline-block text-[14px]  sm:text[18px]  font-medium leading-none transition duration-300 hover:text-accent1'>Back-End_API</li>
+                  <li className='cursor-pointer inline-block text-[14px]  sm:text[18px]  font-medium leading-none transition duration-300 hover:text-accent1'>Full-Stack_Development</li>
               </ul>
 
 
@@ -25,10 +62,10 @@ const Portfolio = () => {
                       <div className='relative truncate group'>
                           <img className='w-full object-cover transition duration-300 group-hover:scale-[1.1]'  src={product1} alt="product1" />
                           <div className='absolute inset-0  bg-layer flex flex-col transition duration-300  opacity-0 group-hover:opacity-100'>
-                              <h4 className='text-[14px] p-4 inline-block bg-accent font-playfair font-normal text-white'>Product Name</h4>
+                              <h4 className='text-[14px] p-4 inline-block bg-accent1 font-playfair font-normal text-white'>Product Name</h4>
                              
                        <Link to={"/portfolio/1"}>
-                        <button className=' self-center justify-self-center flex items-center gap-2.5 mt-8.5 text-[16px] bg-accent py-3 px-5 rounded-[5px] text-white cursor-pointer'>
+                        <button className=' self-center justify-self-center flex items-center gap-2.5 mt-8.5 text-[16px] bg-accent1 py-3 px-5 rounded-[5px] text-white cursor-pointer'>
                                 Show Details
                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -51,9 +88,9 @@ const Portfolio = () => {
                       <div className='relative truncate group'>
                           <img className='w-full object-cover transition duration-300 group-hover:scale-[1.1]'  src={product1} alt="product1" />
                           <div className='absolute inset-0  bg-layer flex flex-col transition duration-300  opacity-0 group-hover:opacity-100'>
-                              <h4 className='text-[14px] p-4 inline-block bg-accent font-playfair font-normal text-white'>Product Name</h4>
+                              <h4 className='text-[14px] p-4 inline-block bg-accent1 font-playfair font-normal text-white'>Product Name</h4>
                              
-                            <button className=' self-center justify-self-center flex items-center gap-2.5 mt-8.5 text-[16px] bg-accent py-3 px-5 rounded-[5px] text-white cursor-pointer'>
+                            <button className=' self-center justify-self-center flex items-center gap-2.5 mt-8.5 text-[16px] bg-accent1 py-3 px-5 rounded-[5px] text-white cursor-pointer'>
                                 Show Details
                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -72,9 +109,9 @@ const Portfolio = () => {
                       <div className='relative truncate group'>
                           <img className='w-full object-cover transition duration-300 group-hover:scale-[1.1]'  src={product1} alt="product1" />
                           <div className='absolute inset-0  bg-layer flex flex-col transition duration-300  opacity-0 group-hover:opacity-100'>
-                              <h4 className='text-[14px] p-4 inline-block bg-accent font-playfair font-normal text-white'>Product Name</h4>
+                              <h4 className='text-[14px] p-4 inline-block bg-accent1 font-playfair font-normal text-white'>Product Name</h4>
                              
-                            <button className=' self-center justify-self-center flex items-center gap-2.5 mt-8.5 text-[16px] bg-accent py-3 px-5 rounded-[5px] text-white cursor-pointer'>
+                            <button className=' self-center justify-self-center flex items-center gap-2.5 mt-8.5 text-[16px] bg-accent1 py-3 px-5 rounded-[5px] text-white cursor-pointer'>
                                 Show Details
                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -92,9 +129,9 @@ const Portfolio = () => {
                       <div className='relative truncate group'>
                           <img className='w-full object-cover transition duration-300 group-hover:scale-[1.1]'  src={product1} alt="product1" />
                           <div className='absolute inset-0  bg-layer flex flex-col transition duration-300  opacity-0 group-hover:opacity-100'>
-                              <h4 className='text-[14px] p-4 inline-block bg-accent font-playfair font-normal text-white'>Product Name</h4>
+                              <h4 className='text-[14px] p-4 inline-block bg-accent1 font-playfair font-normal text-white'>Product Name</h4>
                              
-                            <button className=' self-center justify-self-center flex items-center gap-2.5 mt-8.5 text-[16px] bg-accent py-3 px-5 rounded-[5px] text-white cursor-pointer'>
+                            <button className=' self-center justify-self-center flex items-center gap-2.5 mt-8.5 text-[16px] bg-accent1 py-3 px-5 rounded-[5px] text-white cursor-pointer'>
                                 Show Details
                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -113,9 +150,9 @@ const Portfolio = () => {
                       <div className='relative truncate group'>
                           <img className='w-full object-cover transition duration-300 group-hover:scale-[1.1]'  src={product1} alt="product1" />
                           <div className='absolute inset-0  bg-layer flex flex-col transition duration-300  opacity-0 group-hover:opacity-100'>
-                              <h4 className='text-[14px] p-4 inline-block bg-accent font-playfair font-normal text-white'>Product Name</h4>
+                              <h4 className='text-[14px] p-4 inline-block bg-accent1 font-playfair font-normal text-white'>Product Name</h4>
                              
-                            <button className=' self-center justify-self-center flex items-center gap-2.5 mt-8.5 text-[16px] bg-accent py-3 px-5 rounded-[5px] text-white cursor-pointer'>
+                            <button className=' self-center justify-self-center flex items-center gap-2.5 mt-8.5 text-[16px] bg-accent1 py-3 px-5 rounded-[5px] text-white cursor-pointer'>
                                 Show Details
                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -133,9 +170,9 @@ const Portfolio = () => {
                       <div className='relative truncate group'>
                           <img className='w-full object-cover transition duration-300 group-hover:scale-[1.1]'  src={product1} alt="product1" />
                           <div className='absolute inset-0  bg-layer flex flex-col transition duration-300  opacity-0 group-hover:opacity-100'>
-                              <h4 className='text-[14px] p-4 inline-block bg-accent font-playfair font-normal text-white'>Product Name</h4>
+                              <h4 className='text-[14px] p-4 inline-block bg-accent1 font-playfair font-normal text-white'>Product Name</h4>
                              
-                              <button className=' self-center justify-self-center flex items-center gap-2.5 mt-8.5 text-[16px] bg-accent py-3 px-5 rounded-[5px] text-white cursor-pointer'>
+                              <button className=' self-center justify-self-center flex items-center gap-2.5 mt-8.5 text-[16px] bg-accent1 py-3 px-5 rounded-[5px] text-white cursor-pointer'>
                                 Show Details
                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
                                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />

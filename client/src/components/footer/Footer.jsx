@@ -12,7 +12,7 @@ const Footer = () => {
            <div className='text-[13px] my-2'>
                 Idea From BootstrapMade
             </div>    
-           <div className='text-[16px] text-accent'>
+           <div className='text-[16px] text-accent1'>
                Designed And Developed By <span>Nayan</span>
            </div>
 

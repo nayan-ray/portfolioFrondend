@@ -10,7 +10,11 @@ import About from '../../components/about/About'
 import Footer from '../../components/footer/Footer'
 import ProgessRing from '../../components/progessRing/ProgessRing'
 
+
+
+
 const Home = () => {
+  
 
   const [updatedScrollY, setUpdatedScrollY] = useState(0);
   const [showHeaderBackground, setShowHeaderBackground] = useState(false);
@@ -124,6 +128,9 @@ useEffect(() => {
 
   return (
   <>
+   
+   
+  
 
      <ProgessRing updatedScrollY={updatedScrollY}/>
      <Header showBackground={showHeaderBackground} ref={{hero: heroRef, about: aboutRef, portfolio: portfolioRef, service: serviceRef, contact: contactRef}} activeSection={activeSection}/>

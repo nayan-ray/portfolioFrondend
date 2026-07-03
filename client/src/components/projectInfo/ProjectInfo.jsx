@@ -1,7 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import product1 from "../../assets/product-1.jpg"
+import { getProduct } from '../api/apiCall';
+import { useLoading } from '../../context/LodingContext';
+import { useParams } from 'react-router-dom';
 
 const ProjectInfo = () => {
+  const [product, setProduct] = useState(null);
+   const { setLoading } = useLoading();
+   const { id } = useParams();
+
+   useEffect(() => {
+
+    async function fetchProduct() {
+
+        try{
+
+            setLoading(true);
+
+            const res = await getProduct(id);
+
+            setProduct(res.data);
+
+        }
+        catch(error){
+            console.log(error);
+        }
+        finally{
+            setLoading(false);
+        }
+
+    }
+
+    fetchProduct();
+
+}, [id]);
+
   return (
     <div className='text-description bg-white py-15 '>
 
