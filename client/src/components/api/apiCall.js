@@ -6,5 +6,5 @@ export const getPortfolio = () => {
 
 
 export const getProduct = (id) => {
-    return axios.get(`http://localhost:3000/api/v1/products/${id}`);
+    return axios.get(`http://localhost:3000/api/v1/portfolio/get-details/product/${id}`);
 };

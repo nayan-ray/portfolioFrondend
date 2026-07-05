@@ -6,11 +6,54 @@ import ProjectInfo from '../../components/projectInfo/ProjectInfo'
 import DetailsHeader from '../../components/detailsHeader/DetailsHeader'
 import ProgessRing from '../../components/progessRing/ProgessRing'
 
+import { useParams } from 'react-router-dom';
+import { useLoading } from '../../context/LodingContext'
+import { getProduct } from '../../components/api/apiCall'
+
 const ProductDetails = () => {
 
-    const [updatedScrollY, setUpdatedScrollY] = useState(0);
-     const [showHeaderBackground, setShowHeaderBackground] = useState(false);
-    
+   const [updatedScrollY, setUpdatedScrollY] = useState(0);
+   const [showHeaderBackground, setShowHeaderBackground] = useState(false);
+
+   const [product, setProduct] = useState(null);
+   const { setLoading } = useLoading();
+   const { id } = useParams();
+
+   useEffect(() => {
+
+    async function fetchProduct() {
+
+        try{
+
+            setLoading(true);
+
+            const res = await getProduct(id);
+
+            setProduct(res?.data?.payload[0]);
+            console.log(res?.data?.payload[0]);
+        }
+        catch(error){
+            console.log(error);
+        }
+        finally{
+            setLoading(false);
+        }
+
+    }
+
+    fetchProduct();
+
+}, [id]);
+
+
+
+
+
+
+
+
+
+
     //useEffect to scroll to top when the component is mounted
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -46,8 +89,8 @@ const ProductDetails = () => {
         {/* <Header /> */}
         <ProgessRing updatedScrollY={updatedScrollY} />
         <DetailsHeader showBackground={showHeaderBackground} />
-        <Goal />
-        <ProjectInfo />
+        <Goal product={product} />
+        <ProjectInfo product={product} />
 
         <Footer />
     </div>

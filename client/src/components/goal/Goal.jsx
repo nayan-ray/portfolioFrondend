@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 
-const Goal = () => {
+const Goal = ({ product }) => {
    const navigate = useNavigate();
 
     const handleBack = () => {
@@ -25,7 +25,7 @@ const Goal = () => {
                </button>
             </div>
             <h1 className='text-[30px] sm:text-[42px] font-bold font-playfair mt-8 mb-2.5'>Goal Of The Product</h1>
-            <p className='font-roboto'>The purpose of the product is to make easy learning</p>
+            <p className='font-roboto'>{product?.goal}</p>
         </div>
     </div>
   )
