@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import product1 from "../../assets/product-1.jpg"
 import { Link } from 'react-router-dom'
 
@@ -6,10 +6,20 @@ import { useLoading } from '../../context/LodingContext';
 import { getPortfolio } from '../api/apiCall';
 
 const Portfolio = () => {
-  const [portfolio, setPortfolio] = React.useState([]);
+  const [portfolio, setPortfolio] = useState([]);
+  const [selectedPortfolio, setSelectedPortfolio] = useState([]);
+  const [activeIndex, setActiveIndex] = useState(0);
 
 
 const { setLoading } = useLoading();
+
+
+const items = [
+    { id: 0, name: 'All' },
+    { id: 1, name: 'Figma_Design' },
+    { id: 2, name: 'Frond-End_Design' },
+    { id: 4, name: 'Full-Stack_Development' },
+];
 
 useEffect(() => {
 
@@ -40,9 +50,16 @@ useEffect(() => {
 
 }, []);
 
+useEffect(() => {
+   if(activeIndex === 0){
+    setSelectedPortfolio(portfolio);
+    return;
+   }
+   
+   const selectedItem = portfolio.filter(item => item.category === activeIndex);
+   setSelectedPortfolio(selectedItem);
 
-
-
+}, [portfolio, activeIndex]);
 
   return (
     <div className='py-15'>
@@ -53,17 +70,23 @@ useEffect(() => {
         <div className='w-full mx-auto px-3 z-3 sm:max-w-135 md:max-w-180 lg:max-w-240 xl:max-w-285 xxl:max-w-330' data-aos="fade-up" data-aos-delay="100">
               
               <ul className='mb-5 text-center flex items-center justify-center gap-2.5 sm:gap-5 flex-wrap font-roboto'>
-                  <li className='cursor-pointer inline-block text-[14px] sm:text-[18px] font-medium leading-none transition duration-300 hover:text-accent1'>All</li>
+
+                {items.map((item, index) => (
+                  <li key={item.id} className={`cursor-pointer inline-block text-[14px] sm:text-[18px] font-medium leading-none transition duration-300 hover:text-accent1 ${activeIndex === index ? 'text-accent1' : ''}`} onClick={() => setActiveIndex(index)}>
+                    {item.name}
+                  </li>
+                ))}
+                  {/* <li className='cursor-pointer inline-block text-[14px] sm:text-[18px] font-medium leading-none transition duration-300 hover:text-accent1'>All</li>
                   <li className='cursor-pointer inline-block text-[14px] sm:text-[18px] font-medium leading-none transition duration-300 hover:text-accent1'>Figma_Design</li>
                   <li className='cursor-pointer inline-block text-[14px]  sm:text[18px]  font-medium leading-none transition duration-300 hover:text-accent1'>Frond-End_Design</li>
                   <li className='cursor-pointer inline-block text-[14px]  sm:text[18px]  font-medium leading-none transition duration-300 hover:text-accent1'>Back-End_API</li>
-                  <li className='cursor-pointer inline-block text-[14px]  sm:text[18px]  font-medium leading-none transition duration-300 hover:text-accent1'>Full-Stack_Development</li>
+                  <li className='cursor-pointer inline-block text-[14px]  sm:text[18px]  font-medium leading-none transition duration-300 hover:text-accent1'>Full-Stack_Development</li> */}
               </ul>
 
 
               <div className='flex flex-col flex-wrap   md:flex-row '>
 
-                  {portfolio && portfolio.map((item, index)=>{
+                  {selectedPortfolio && selectedPortfolio.map((item, index)=>{
                     return (
                         <div key={index} className='mb-7.5 md:w-1/2 md:px-3 lg:w-1/3 ' data-aos="fade-up" data-aos-delay={200 + index * 100}>
                           <div className='relative truncate group'>
