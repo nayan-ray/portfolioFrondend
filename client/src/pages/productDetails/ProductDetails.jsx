@@ -30,7 +30,7 @@ const ProductDetails = () => {
             const res = await getProduct(id);
 
             setProduct(res?.data?.payload[0]);
-            console.log(res?.data?.payload[0]);
+           
         }
         catch(error){
             console.log(error);

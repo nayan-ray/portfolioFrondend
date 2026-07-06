@@ -18,7 +18,7 @@ const Home = () => {
 
   const [updatedScrollY, setUpdatedScrollY] = useState(0);
   const [showHeaderBackground, setShowHeaderBackground] = useState(false);
-    const location = useLocation();
+    const {state} = useLocation();
     const navigate = useNavigate();
 
   const [activeSection, setActiveSection] = useState("about");
@@ -30,26 +30,19 @@ const Home = () => {
   const contactRef = useRef(null);
 
 
+
   //useEffect to scroll to top when the component is mounted
  
 
     useEffect(()=>{
 
-         if (location.state?.scrollTo === "portfolio") {
+         if (state?.backFrom === "details") {
    
              portfolioRef.current?.scrollIntoView({
                    behavior: "smooth",
                });
           
-      // Remove the state so refresh won't scroll again
-         const timer = setTimeout(() => {
-             navigate(location.pathname, {
-             replace: true,
-              state: null,
-            });
-         }, 500); // Wait for the scroll animation
 
-    return () => clearTimeout(timer);
 
          }else{
            window.scrollTo({

@@ -4,9 +4,12 @@ import React, { useEffect, useState } from 'react'
 
 
 const ProjectInfo = ({ product }) => {
+
+
   const text =product?.usage;
   const steps = text?.split(',');
 
+  
   return (
     <div className='text-description bg-white py-15 '>
 
@@ -25,7 +28,10 @@ const ProjectInfo = ({ product }) => {
                          </li>
                           <li className='mb-2.5'>
                             <strong>Visits URL : </strong>
-                            {product?.visitLink}
+                            <a className='text-blue-500 hover:text-blue-700' href={product?.visitLink} target="_blank" rel="noopener noreferrer">
+                              {product?.visitLink}
+                            </a>
+                            
                          </li>
                         
                          <li className='mb-2.5'>

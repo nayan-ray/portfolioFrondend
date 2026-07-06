@@ -34,7 +34,7 @@ useEffect(() => {
             // API may wrap the array inside `data` (e.g. { data: [...] })
             // prefer the inner array when present
             setPortfolio(res?.data?.payload);
-            console.log(res);
+            
 
         }
         catch(error){
