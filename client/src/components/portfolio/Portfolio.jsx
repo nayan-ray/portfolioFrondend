@@ -89,7 +89,7 @@ useEffect(() => {
                  {selectedPortfolio.length === 0 ?
 
                   (
-                    <p className='text-center w-full'>
+                    <p className='text-center w-full text-accent1'>
                        The projects will be uploaded very soon. Please wait a while...
                     </p>
                   ) :
