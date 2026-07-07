@@ -1,28 +1,29 @@
 import React from 'react'
+import {Gauge, Layers3, Monitor, MonitorSmartphone, Palette, Server} from "lucide-react"
 
 const Service = () => {
   return (
     <div className='py-15'>
         <div className='pb-15 text-center w-full mx-auto px-3 z-3 sm:max-w-135 md:max-w-180 lg:max-w-240 xl:max-w-285 xxl:max-w-330' data-aos="fade-up">
               <h2 className='text-[32px] font-light mb-3.75 text-[#777777] font-playfair leading-[1.2]'>Services</h2>
-              <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+              <p>What I Do</p>
         </div>
         <div className='w-full mx-auto px-3 z-3 sm:max-w-135 md:max-w-180 lg:max-w-240 xl:max-w-285 xxl:max-w-330' data-aos="fade-up" data-aos-delay="100">
               <div className='flex flex-col flex-wrap   md:flex-row '>
                   <div className='mb-7.5 md:w-1/2 md:px-3 lg:w-1/3 ' data-aos="fade-up" data-aos-delay="200">
                      <div className="flex group relative before:content-[''] before:absolute before:inset-0 ">
                        <div className='mr-5'>
-                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-10 h-12 -mt-1 text-accent1">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
-                          </svg>
+                        
+
+                          <Palette size={40} className='text-accent1'/>
 
                        </div>
                         <div>
                            <h4 className='text-[#777777] font-bold font-playfair mb-2.5 leading-[1.2] transition duration-300 text-[20px] group-hover:text-accent1'>
-                              Lorem Ipsum
+                              UI/UX Design
                            </h4>
                            <p className='text-[15px] text-[color-mix(in_srgb,var(--color-description),transparent_30%)] font-roboto'>
-                              Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+                              Designing intuitive and engaging user interfaces focused on usability, accessibility, and business goals.
                            </p>
                         </div>
 
@@ -34,17 +35,38 @@ const Service = () => {
                   <div className='mb-7.5 md:w-1/2 md:px-3 lg:w-1/3 ' data-aos="fade-up" data-aos-delay="300">
                      <div className="flex group relative before:content-[''] before:absolute before:inset-0 ">
                        <div className='mr-5'>
-                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-10 h-12 -mt-1 text-accent1">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
-                          </svg>
+                         
+                           <MonitorSmartphone size={40} className='text-accent1'/>
 
                        </div>
                         <div>
                            <h4 className='text-[#777777] font-bold font-playfair mb-2.5 leading-[1.2] transition duration-300 text-[20px] group-hover:text-accent1'>
-                              Lorem Ipsum
+                              Design-to-Code
                            </h4>
                            <p className='text-[15px] text-[color-mix(in_srgb,var(--color-description),transparent_30%)] font-roboto'>
-                              Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+                             Transforming Figma designs into pixel-perfect, responsive, and production-ready websites.
+                           </p>
+                        </div>
+
+                     </div>
+
+                  </div>
+
+
+                 
+
+                  <div className='mb-7.5 md:w-1/2 md:px-3 lg:w-1/3 ' data-aos="fade-up" data-aos-delay="400">
+                     <div className="flex group relative before:content-[''] before:absolute before:inset-0 ">
+                       <div className='mr-5 '>
+                         <Monitor size={40} className='text-accent1'/>
+
+                       </div>
+                        <div>
+                           <h4 className='text-[#777777] font-bold font-playfair mb-2.5 leading-[1.2] transition duration-300 text-[20px] group-hover:text-accent1'>
+                              Frontend Development
+                           </h4>
+                           <p className='text-[15px] text-[color-mix(in_srgb,var(--color-description),transparent_30%)] font-roboto'>
+                              Building responsive, accessible, and interactive web applications using modern frontend technologies.
                            </p>
                         </div>
 
@@ -56,17 +78,15 @@ const Service = () => {
                   <div className='mb-7.5 md:w-1/2 md:px-3 lg:w-1/3 ' data-aos="fade-up" data-aos-delay="400">
                      <div className="flex group relative before:content-[''] before:absolute before:inset-0 ">
                        <div className='mr-5 '>
-                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-10 h-12 -mt-1 text-accent1">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
-                          </svg>
+                         <Server size={40} className='text-accent1'/>
 
                        </div>
                         <div>
                            <h4 className='text-[#777777] font-bold font-playfair mb-2.5 leading-[1.2] transition duration-300 text-[20px] group-hover:text-accent1'>
-                              Lorem Ipsum
+                              Backend Development
                            </h4>
                            <p className='text-[15px] text-[color-mix(in_srgb,var(--color-description),transparent_30%)] font-roboto'>
-                              Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+                              Designing secure and scalable APIs, authentication systems, and database architectures.
                            </p>
                         </div>
 
@@ -75,6 +95,44 @@ const Service = () => {
                   </div>
 
 
+                  <div className='mb-7.5 md:w-1/2 md:px-3 lg:w-1/3 ' data-aos="fade-up" data-aos-delay="400">
+                     <div className="flex group relative before:content-[''] before:absolute before:inset-0 ">
+                       <div className='mr-5 '>
+                         < Layers3 size={40} className='text-accent1'/>
+
+                       </div>
+                        <div>
+                           <h4 className='text-[#777777] font-bold font-playfair mb-2.5 leading-[1.2] transition duration-300 text-[20px] group-hover:text-accent1'>
+                              Full Stack Web Applications
+                           </h4>
+                           <p className='text-[15px] text-[color-mix(in_srgb,var(--color-description),transparent_30%)] font-roboto'>
+                              Developing complete solutions from concept to deployment using the MERN stack.
+                           </p>
+                        </div>
+
+                     </div>
+
+                  </div>
+
+
+                   <div className='mb-7.5 md:w-1/2 md:px-3 lg:w-1/3 ' data-aos="fade-up" data-aos-delay="400">
+                     <div className="flex group relative before:content-[''] before:absolute before:inset-0 ">
+                       <div className='mr-5 '>
+                         <Gauge size={40} className='text-accent1'/>
+
+                       </div>
+                        <div>
+                           <h4 className='text-[#777777] font-bold font-playfair mb-2.5 leading-[1.2] transition duration-300 text-[20px] group-hover:text-accent1'>
+                              Website Optimization
+                           </h4>
+                           <p className='text-[15px] text-[color-mix(in_srgb,var(--color-description),transparent_30%)] font-roboto'>
+                              Improving performance, accessibility and overall user experience.
+                           </p>
+                        </div>
+
+                     </div>
+
+                  </div>
 
               </div>
         </div>
