@@ -19,7 +19,7 @@ const Goal = ({ product }) => {
             <div>
 
                 <Link to="/" state={{backFrom : "details"}}>
-                   <button className='flex items-center gap-2.5 text-[14px] mb-4 bg-accent1 px-5 py-2.5 lg:text-[20px] lg:py-3'>
+                   <button className='cursor-pointer flex items-center gap-2.5 text-[14px] mb-4 bg-accent1 px-5 py-2.5 lg:text-[20px] lg:py-3'>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                       </svg>
