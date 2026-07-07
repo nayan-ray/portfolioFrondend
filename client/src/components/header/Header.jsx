@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Header = ({ showBackground , ref, activeSection }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,13 +23,18 @@ const Header = ({ showBackground , ref, activeSection }) => {
     <div className={`fixed mt-0 left-0 right-0 z-10 py-2.5 transition-all duration-300 ease-in-out ${showBackground ? 'bg-header-background shadow-header-shadow' : 'bg-transparent'}`}>
      <div className='w-full mx-auto px-3 sm:max-w-135 md:max-w-180 lg:max-w-240 xl:max-w-285 xxl:max-w-330'>
         <div className='flex items-center justify-between'>
-            <span className='text-[30px] font-bold text-heading'>PMMP</span>
+           
+           <Link to={"/"}>
+               <span className='text-[30px] font-bold text-heading cursor-pointer'>PMMP</span>
+           </Link>
+
+            
             <nav className='hidden xl:block text-nav text-4 font-poppins font-normal'>
-                <button className={`py-4.5 px-3.75 transition duration-300 ${activeSection === 'hero' ? 'text-default' : 'hover:text-default'}`} onClick={() => handleScrollToSection(ref.hero) }>Home</button>
-                <button className={`py-4.5 px-3.75 transition duration-300 ${activeSection === 'about' ? 'text-default' : 'hover:text-default'}`} onClick={() => handleScrollToSection(ref.about)}>About</button>
-                <button className={`py-4.5 px-3.75 transition duration-300 ${activeSection === 'service' ? 'text-default' : 'hover:text-default'}`} onClick={() => handleScrollToSection(ref.service)}>Services</button>
-                <button className={`py-4.5 px-3.75 transition duration-300 ${activeSection === 'portfolio' ? 'text-default' : 'hover:text-default'}`} onClick={() => handleScrollToSection(ref.portfolio)}>Portfolio</button>
-                <button className={`py-4.5 px-3.75 transition duration-300 ${activeSection === 'contact' ? 'text-default' : 'hover:text-default'}`} onClick={() => handleScrollToSection(ref.contact)}>Contact</button>
+                <button className={`py-4.5 px-3.75 cursor-pointer transition duration-300 ${activeSection === 'hero' ? 'text-default' : 'hover:text-default'}`} onClick={() => handleScrollToSection(ref.hero) }>Home</button>
+                <button className={`py-4.5 px-3.75 cursor-pointer transition duration-300 ${activeSection === 'about' ? 'text-default' : 'hover:text-default'}`} onClick={() => handleScrollToSection(ref.about)}>About</button>
+                <button className={`py-4.5 px-3.75 cursor-pointer transition duration-300 ${activeSection === 'service' ? 'text-default' : 'hover:text-default'}`} onClick={() => handleScrollToSection(ref.service)}>Services</button>
+                <button className={`py-4.5 px-3.75 cursor-pointer transition duration-300 ${activeSection === 'portfolio' ? 'text-default' : 'hover:text-default'}`} onClick={() => handleScrollToSection(ref.portfolio)}>Portfolio</button>
+                <button className={`py-4.5 px-3.75 cursor-pointer transition duration-300 ${activeSection === 'contact' ? 'text-default' : 'hover:text-default'}`} onClick={() => handleScrollToSection(ref.contact)}>Contact</button>
             </nav>
           
         {!isMobileMenuOpen ? (

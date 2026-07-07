@@ -1,6 +1,6 @@
 import React from 'react'
 import { ReactTyped } from "react-typed";
-import heroImage from '../../assets/image.png'
+import heroImage from '../../assets/image 24.png'
 import { ArrowDown } from "lucide-react";
 const Hero = () => {
   return (
@@ -34,7 +34,7 @@ const Hero = () => {
          />
          </p>
          <p className=' mt-6'>
-          <button className=' text-white flex items-center gap-2.5 bg-accent1 px-6 py-2 font-playfair font-normal'>View My Work <ArrowDown /> </button>
+          <button className='cursor-text text-white flex items-center gap-2.5 bg-accent1 px-6 py-2 font-playfair font-normal'>View My Work <ArrowDown /> </button>
          </p>
       </div>
     </div>

@@ -85,8 +85,18 @@ useEffect(() => {
 
 
               <div className='flex flex-col flex-wrap   md:flex-row '>
+                 
+                 {selectedPortfolio.length === 0 ?
 
-                  {selectedPortfolio && selectedPortfolio.map((item, index)=>{
+                  (
+                    <p className='text-center w-full'>
+                       The projects will be uploaded very soon. Please wait a while...
+                    </p>
+                  ) :
+                  
+                  (
+                  
+                    selectedPortfolio && selectedPortfolio.map((item, index)=>{
                     return (
                         <div key={index} className='mb-7.5 md:w-1/2 md:px-3 lg:w-1/3 ' data-aos="fade-up" data-aos-delay={200 + index * 100}>
                           <div className='relative truncate group'>
@@ -108,40 +118,9 @@ useEffect(() => {
 
                     </div>
                     )
-                 })}
+                 })
 
-
-                   <div className='mb-7.5 md:w-1/2 md:px-3 lg:w-1/3 ' data-aos="fade-up" data-aos-delay="200">
-                      <div className='relative truncate group'>
-                          <img className='w-full object-cover transition duration-300 group-hover:scale-[1.1]'  src={product1} alt="product1" />
-                          <div className='absolute inset-0  bg-layer flex flex-col transition duration-300  opacity-0 group-hover:opacity-100'>
-                              <h4 className='text-[14px] p-4 inline-block bg-accent1 font-playfair font-normal text-white'>Product Name</h4>
-                             
-                       <Link to={"/portfolio/1"}>
-                        <button className=' self-center justify-self-center flex items-center gap-2.5 mt-8.5 text-[16px] bg-accent1 py-3 px-5 rounded-[5px] text-white cursor-pointer'>
-                                Show Details
-                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
-                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                                   </svg>
-                            </button>
-                       
-                       </Link>
-                          </div>
-                      </div>
-
-                  </div>
-                   
-
-
-
-
-
-                
-
-
-
-
-
+                  )}
 
             </div>
         </div>
