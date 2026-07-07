@@ -1,7 +1,7 @@
 import React from 'react'
 import { ReactTyped } from "react-typed";
 import heroImage from '../../assets/image.png'
-
+import { ArrowDown } from "lucide-react";
 const Hero = () => {
   return (
     <div className="relative before:content-[''] before:absolute before:inset-0 before:z-2 before:bg-[color-mix(in_srgb,var(--color-background),transparent_80%)] w-full h-screen py-20 flex items-center justify-items-center ">
@@ -15,9 +15,13 @@ const Hero = () => {
            <ReactTyped
             strings={[
                 "UI/UX Designer",
+                 "Frond-End Designer",
+                  "React Developer",
+                 "Node Developer",
+                 "Backend Developer",
                  "Full Stack MERN Developer",
-                 "React Developer",
-                 "Problem Solver"
+             
+                
                ]}
              typeSpeed={60}
              backSpeed={40}
@@ -28,6 +32,9 @@ const Hero = () => {
              cursorChar="|"
              smartBackspace
          />
+         </p>
+         <p className=' mt-6'>
+          <button className=' text-white flex items-center gap-2.5 bg-accent1 px-6 py-2 font-playfair font-normal'>View My Work <ArrowDown /> </button>
          </p>
       </div>
     </div>

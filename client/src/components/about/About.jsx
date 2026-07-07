@@ -19,7 +19,7 @@ const About = () => {
                   </div>
                   <div className=' mt-6 mx-3 md:px-3 md:mx-0 lg:w-7/12 lg:mt-0'>
                        <h3 className='text-[28px] font-bold text-[#777777] font-playfair mb-2 leading-[1.2]'>
-                        I'm a ux /ui designer and Full stack developer who always loves to learn new things.
+                        I'm a ux /ui designer and Full stack developer who always loves to do & learn new things.
                        </h3>
                        <p className='font-roboto'>
                         If  I can understand entire work flow of a project, I can build it with responsiveness with MERN according to company's project structure and documentation. Technologies are FIGMA, HTML, CSS, CSS FRAMEWORK like tailwind, bootstrap and JAVASCRIPT, REACT, NODE, EXPRESS, MONGODB etc. If I face any problem while working on my project and find any lacking on any topic, I strongly believe that I can overcome it soon. I can do it if I see it.
