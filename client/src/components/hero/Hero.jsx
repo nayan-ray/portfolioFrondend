@@ -17,7 +17,6 @@ const Hero = () => {
                 "UI/UX Designer",
                  "Frond-End Designer",
                   "React Developer",
-                 "Node Developer",
                  "Backend Developer",
                  "Full Stack MERN Developer",
              
