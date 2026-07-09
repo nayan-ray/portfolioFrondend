@@ -26,6 +26,15 @@ const ProjectInfo = ({ product }) => {
                             <strong>Type : </strong>
                             {product?.type}
                          </li>
+
+                          <li className='mb-2.5'>
+                            <strong>Status : </strong>
+                            {product?.status}
+                         </li>
+
+
+
+
                           <li className='mb-2.5'>
                             <strong>Visits URL : </strong>
                             <a className='text-blue-500 hover:text-blue-700' href={product?.visitLink} target="_blank" rel="noopener noreferrer">
