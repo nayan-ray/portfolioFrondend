@@ -72,7 +72,7 @@ useEffect(() => {
               <ul className='mb-5 text-center flex items-center justify-center gap-2.5 sm:gap-5 flex-wrap font-roboto'>
 
                 {items.map((item, index) => (
-                  <li key={item.id} className={`cursor-pointer inline-block text-[14px] sm:text-[18px] font-medium leading-none transition duration-300 hover:text-accent1 ${activeIndex === index ? 'text-accent1' : ''}`} onClick={() => setActiveIndex(index)}>
+                  <li key={index} className={`cursor-pointer inline-block text-[14px] sm:text-[18px] font-medium leading-none transition duration-300 hover:text-accent1 ${activeIndex === index ? 'text-accent1' : ''}`} onClick={() => setActiveIndex(index)}>
                     {item.name}
                   </li>
                 ))}
