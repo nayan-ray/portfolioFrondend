@@ -16,7 +16,7 @@ const { setLoading } = useLoading();
 
 const items = [
     { id: 0, name: 'All' },
-    { id: 1, name: 'Figma_Design' },
+    // { id: 1, name: 'Figma_Design' },
     { id: 2, name: 'Frond-End_Design' },
     { id: 4, name: 'Full-Stack_Development' },
 ];
