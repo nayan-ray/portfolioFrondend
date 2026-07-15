@@ -7,7 +7,7 @@ import DetailsHeader from '../../components/detailsHeader/DetailsHeader'
 import ProgessRing from '../../components/progessRing/ProgessRing'
 
 import { useParams } from 'react-router-dom';
-import { useLoading } from '../../context/LodingContext'
+import { useLoading, loading } from '../../context/LodingContext'
 import { getProduct } from '../../components/api/apiCall'
 
 const ProductDetails = () => {
@@ -87,12 +87,24 @@ const ProductDetails = () => {
   return (
     <div>
         {/* <Header /> */}
-        <ProgessRing updatedScrollY={updatedScrollY} />
-        <DetailsHeader showBackground={showHeaderBackground} />
-        <Goal product={product} />
-        <ProjectInfo product={product} />
+       
+        {loading ? (
+            <div className="fixed top-0 left-0 w-full h-full z-500 flex items-center justify-center bg-white">
+                <span className="loading loading-bars loading-xl"></span>
+           </div>
+        ): (
+            <>
+               <ProgessRing updatedScrollY={updatedScrollY} />
+               <DetailsHeader showBackground={showHeaderBackground} />
+               <Goal product={product} />
+               <ProjectInfo product={product} />
+               <Footer />
+            </>
+         
+        )}
+        
 
-        <Footer />
+      
     </div>
   )
 }
