@@ -11,7 +11,7 @@ const Portfolio = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
 
-const { setLoading } = useLoading();
+const { setLoading, loading } = useLoading();
 
 
 const items = [
@@ -85,8 +85,18 @@ useEffect(() => {
 
 
               <div className='flex flex-col flex-wrap   md:flex-row '>
+
                  
-                 {selectedPortfolio.length === 0 ?
+               {   loading && (
+                     <div>
+                      hello
+                    </div>
+                  )
+                }
+
+                 
+                 
+                 {selectedPortfolio.length === 0 && loading === false ?
 
                   (
                     <p className='text-center w-full text-accent1'>
