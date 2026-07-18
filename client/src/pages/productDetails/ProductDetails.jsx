@@ -7,7 +7,7 @@ import DetailsHeader from '../../components/detailsHeader/DetailsHeader'
 import ProgessRing from '../../components/progessRing/ProgessRing'
 
 import { useParams } from 'react-router-dom';
-import { useLoading, loading } from '../../context/LodingContext'
+import { useLoading } from '../../context/LodingContext'
 import { getProduct } from '../../components/api/apiCall'
 
 const ProductDetails = () => {
@@ -16,7 +16,7 @@ const ProductDetails = () => {
    const [showHeaderBackground, setShowHeaderBackground] = useState(false);
 
    const [product, setProduct] = useState(null);
-   const { setLoading } = useLoading();
+   const { setLoading, loading } = useLoading();
    const { id } = useParams();
 
    useEffect(() => {

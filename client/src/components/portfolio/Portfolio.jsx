@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 import { useLoading } from '../../context/LodingContext';
 import { getPortfolio } from '../api/apiCall';
+import Skeleton from '../skeleton/Skeleton';
 
 const Portfolio = () => {
   const [portfolio, setPortfolio] = useState([]);
@@ -20,6 +21,8 @@ const items = [
     { id: 2, name: 'Frond-End_Design' },
     { id: 4, name: 'Full-Stack_Development' },
 ];
+
+
 
 useEffect(() => {
 
@@ -76,11 +79,7 @@ useEffect(() => {
                     {item.name}
                   </li>
                 ))}
-                  {/* <li className='cursor-pointer inline-block text-[14px] sm:text-[18px] font-medium leading-none transition duration-300 hover:text-accent1'>All</li>
-                  <li className='cursor-pointer inline-block text-[14px] sm:text-[18px] font-medium leading-none transition duration-300 hover:text-accent1'>Figma_Design</li>
-                  <li className='cursor-pointer inline-block text-[14px]  sm:text[18px]  font-medium leading-none transition duration-300 hover:text-accent1'>Frond-End_Design</li>
-                  <li className='cursor-pointer inline-block text-[14px]  sm:text[18px]  font-medium leading-none transition duration-300 hover:text-accent1'>Back-End_API</li>
-                  <li className='cursor-pointer inline-block text-[14px]  sm:text[18px]  font-medium leading-none transition duration-300 hover:text-accent1'>Full-Stack_Development</li> */}
+                  
               </ul>
 
 
@@ -88,9 +87,12 @@ useEffect(() => {
 
                  
                {   loading && (
-                     <div>
-                      hello
-                    </div>
+                    <>
+                      <Skeleton />
+                       <Skeleton />
+                        <Skeleton />
+                    </>
+                     
                   )
                 }
 
@@ -131,6 +133,10 @@ useEffect(() => {
                  })
 
                   )}
+
+
+
+
 
             </div>
         </div>
